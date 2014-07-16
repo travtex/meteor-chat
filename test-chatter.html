@@ -5,21 +5,26 @@
 <body>
 	<div class="top"><h1>The Super Awesome Meteor Test Chat</h1></div>
   <div class="entry-field">{{> entryfield}}</div>
-
+	<br />
+	<hr>
 
   {{> messages}}
+    <hr>
 </body>
 
 
 <template name="entryfield">
-	<input type="text" id="name" placeholder="Name" /> <input type="text" id="message" placeholder="Your Message" />
+	<input type="text" id="name" placeholder="Name" data-toggle="tooltip" data-placement="bottom" title="Enter Your Name" /> 
+	<input type="text" id="message" placeholder="Your Message" data-toggle="tooltip" data-placement="bottom" title="Say Things!"/>
 </template>
 
 <template name="messages">
-	<p>
 		{{#each messages}}
-		<strong>{{name}}</strong>- {{message}}<br/>
+		<!-- <strong>{{name}}</strong>- {{message}}<br/> -->
+		<blockquote>
+			<p>{{message}}</p>
+			<footer>{{name}}</footer>
+		</blockquote>
 		{{/each}}
-	</p>
 </template>
 

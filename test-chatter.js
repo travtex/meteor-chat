@@ -26,5 +26,9 @@ if (Meteor.isClient) {
       }
     }
   }
-  
+
+  Template.entryfield.rendered = function() {
+    $('#name').tooltip();
+    $('#message').tooltip();
+  }
 }
