@@ -1,0 +1,25 @@
+<head>
+  <title>test-chatter</title>
+</head>
+
+<body>
+	<div class="top"><h1>The Super Awesome Meteor Test Chat</h1></div>
+  <div class="entry-field">{{> entryfield}}</div>
+
+
+  {{> messages}}
+</body>
+
+
+<template name="entryfield">
+	<input type="text" id="name" placeholder="Name" /> <input type="text" id="message" placeholder="Your Message" />
+</template>
+
+<template name="messages">
+	<p>
+		{{#each messages}}
+		<strong>{{name}}</strong>- {{message}}<br/>
+		{{/each}}
+	</p>
+</template>
+
