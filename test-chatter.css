@@ -34,3 +34,7 @@ input[type=text] {
     background: rgba(255,255,255,0.5);
     margin: 0 0 10px 0;
 }
+
+.login-buttons-dropdown-align-right {
+    float: right;
+}

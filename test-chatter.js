@@ -31,4 +31,5 @@ if (Meteor.isClient) {
     $('#name').tooltip();
     $('#message').tooltip();
   }
+
 }
